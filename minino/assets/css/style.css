@@ -1,0 +1,135 @@
+
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 400;
+}
+body {
+	font-family: 'Playfair Display', serif;
+  color: #626262;
+  line-height: 1.7142;
+}
+a:hover { text-decoration: none }
+.blog-meta, .blog-readmore-btn {font-family: 'Ubuntu', sans-serif;font-weight:300}
+.logo {
+  padding: 70px 0;
+}
+.main-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+}
+.main-menu ul li {
+  display: inline-block;
+  padding-left: 95px;
+}
+.main-menu ul li a {
+  color: #626262;
+  text-transform: uppercase;
+  display: block;
+  padding: 70px 0;
+}
+.blog-featured-content {
+	margin-bottom: 30px;
+}
+.blog-featured-content img {
+  width: 100%;
+}
+
+.single-blog-item {
+  margin-bottom: 120px;
+}
+.single-blog-item h2 a {
+  color: #626262;
+}
+.blog-meta a {
+  color: #626262;
+  text-transform: uppercase;
+}
+.single-blog-item h2 {
+  margin: 20px 0 25px;
+}
+.blog-readmore-btn {
+  color: #b4ad9e;
+  text-transform: uppercase;
+}
+.blog-content {
+  margin-bottom: 30px;
+}
+.big-blog-box .blog-featured-content {
+	margin-bottom: 95px;
+}
+.blog-content p:last-child {
+  margin: 0;
+}
+.newsletter-area {
+  background: #f0f0f0;
+  padding: 70px 0;
+  margin-bottom:120px;
+}
+.newsletter-area h2 {
+	margin-bottom: 50px;
+	color: #333;
+}
+.newsletter-form {
+  width: 325px;
+  margin: 0 auto;
+  border-bottom:1px solid #000;
+  position: relative;
+}
+.newsletter-form input[type=email] {
+  border: navajowhite;
+  background: #f0f0f0;
+  width: 100%;
+  padding:10px;
+}
+.newsletter-form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  border:none;
+}
+.load-more-btn a {
+	font-size: 20px;
+	color: #626262;
+	border: 1px solid #626262;
+	padding: 8px 25px;
+	display: inline-block;
+}
+.footer-area {
+	background: #f0f0f0;
+	padding: 35px 0;
+	margin-top: 90px;
+}
+.footer-area ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-area ul li {
+  display: inline-block;
+}
+.footer-area ul li a{
+	color:#000;
+	display:block;
+}
+.footer-area ul li a i {
+	color: #626262;
+}
+.footer-menu li a {
+  padding-right: 10px;
+}
+.social-icon li a {
+  padding-left: 10px;
+}
