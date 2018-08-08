@@ -1,0 +1,119 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+	.single-product-item {
+		height: 260px;
+		margin-bottom:15px;
+	}
+    .single-product-item:nth-child(2) {
+	height: 535px;
+}
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+
+.big-menu ul li {
+	padding-top: 120px;
+}
+.big-menu ul li a {
+	font-size: 30px;
+}
+.single-product-item {
+	width: 31.333%;
+}
+.single-product-item:nth-child(2), .single-product-item:nth-child(4), .single-product-item:nth-child(9){
+	width: 64.3333%;
+}
+.promo-bg {
+	padding: 30px;
+	padding-bottom: 0;
+}
+.brand-image {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.footer-menu, .email-subscribe-form, .social-link {
+	text-align: center;
+}
+
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+
+ .header-left ul, .text-right {
+	display: none;
+}
+.homepage-slider-wrap, .homepage-slider-wrap div {
+	height: auto;
+}
+.header-top-area {
+	position: relative;
+	background: #f8eeed;
+}
+.header-top-area a {
+	padding: 20px 0;
+}
+.slider-text-table-cell p {
+	font-size: 50px;
+	line-height: 60px;
+}
+.slider-text-table-cell {
+	padding:15px 0;
+	text-align:center;
+}
+.homepage-slider-wrap .owl-carousel .owl-item img {
+	display: none;
+}
+.big-menu ul li {
+	padding: 40px;
+	width:100%;
+	text-align: center;
+}
+.big-menu ul li a, .big-menu ul li:nth-child(2), .big-menu ul li:nth-child(3), .big-menu ul li:nth-child(4) {
+	font-size: 40px;
+	width:100%;
+	text-align: center;
+}
+.product-area {
+	padding-top: 50px;
+}
+.single-product-item, .single-product-item:nth-child(2), .single-product-item:nth-child(4), .single-product-item:nth-child(9) {
+	width: 100%;
+	float: none;
+}
+.promo-content {
+	padding: 20px;
+}
+.promo-bg {
+	padding-top: 15px;
+}
+.promo-title h2 {
+	font-size: 25px;
+}
+.year-text {
+	top: 0px;
+	font-size: 60px;
+}
+.product-promotion .owl-dots {
+	position: relative;
+	right: auto;
+	top: auto;
+	margin-top: 0;
+	width: 100%;
+	text-align: center;
+}
+.product-promotion .owl-dots div {
+	display: inline-block;
+	margin:5px;
+}
+.footer-menu, .email-subscribe-form, .social-link {
+	text-align: center;
+}
+.email-subscribe-form input[type="submit"] {
+	margin-top: 10px;
+}
+    
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+
+}
