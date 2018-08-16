@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Network | Valency International Trading</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"> 
+<!-- <script type="text/javascript" src="js/maxheight.js"></script> -->
+<!-- <script type="text/javascript" src="js/jquery-1.6.min.js" ></script> -->
+<script src="js/jquery.min.js"></script>
+
+</head>
+
+<body id="page_network" onLoad="new ElementMaxHeight();">
+<div class="main"> 
+  <!-- header -->
+          
+<div class="wrapper">
+  <div class="container_12">
+    <div class="grid_12">
+      <section id="content" class="indent">
+        <div class="grid_indent">
+          <h2>Network</h2>
+          <p>With the headquarters situated in Singapore, VIT’s vast presence is felt in 15 different countries across Asia and Africa. Having major presence in Asia and Africa gives us full control over the supply chain and allows us to provide excellent service and distribution to our customers.  Locate VIT's presence by moving your cursor on the map below.</p>
+          <ul id="network4" class="list3">
+            <li>
+              <div>
+                <h6 class="light-header">Africa (East)</h6>
+                <ul>
+                  <li class="ethiopia">Ethiopia</li>
+                </ul>
+              </div>  
+            </li>
+            <li>
+              <div>
+                <h6 class="light-header">Africa (West)</h6>
+                <ul>
+                  <li class="benin">Benin</li>
+                                    <li class="ghana">Ghana</li>
+                  <li class="guinea-bissau">Guinea-Bissau</li>
+                  <li class="ivory-coast">Ivory Coast</li>
+                  <li class="nigeria">Nigeria</li>
+                  <li class="senegal">Senegal</li>
+                  <li class="togo">Togo</li>
+                </ul>
+              </div>  
+            </li>
+
+            <li class="china">
+              <div>
+                <h6 class="light-header">China</h6>
+                <ul>
+                  <li class="beijing" data-type="city">Beijing</li>
+                </ul>
+              </div>
+            </li>
+            <li class="india">
+              <div>
+                <h6 class="light-header">India</h6>
+                <ul>
+                	<li class="delhi" data-type="city">Delhi</li>
+                                                                                        </ul>
+              </div>
+            </li>
+
+            <li class="singapore">
+              <div>
+                <h6 class="light-header">Singapore</h6>
+                <ul>
+                  <li class="singapore-city" data-type="city">Singapore</li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h6 class="light-header">South East Asia</h6>
+                <ul>
+                  <li class="myanmar">Myanmar</li>
+                                    <li class="vietnam">Vietnam</li>
+                  <li class="indonesia">Indonesia</li>
+                </ul>
+              </div>
+            </li>
+            
+            <li>
+              <div>
+                <h6 class="light-header">Others</h6>
+                <ul>
+                  <li class="sri-lanka">Sri Lanka</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          
+          <div id="network_map4">
+            <div class="west-africa">
+              <div class="country ethiopia" data-country="ethiopia"><div></div></div>
+            </div>
+            <div class="west-africa">
+              <div class="country benin" data-country="benin" style="z-index: 1;"><div></div></div>
+              <div class="country ghana" data-country="ghana" style="z-index: 2;"><div></div></div>
+              <div class="country guinea-bissau" data-country="guinea-bissau" style="z-index: 1;"><div></div></div>
+              <div class="country ivory-coast" data-country="ivory-coast"><div></div></div>
+              <div class="country nigeria" data-country="nigeria"><div></div></div>
+              <div class="country senegal" data-country="senegal"><div></div></div>
+              <div class="country togo" data-country="togo" style="z-index: 1;"><div></div></div>
+            </div>
+            <div class="country china" data-country="china">
+              <div class="beijing"></div>
+            </div>
+            <div class="country india" data-country="india">
+                                                                      <div class="delhi"></div>
+            </div>
+            <div class="country singapore" data-country="singapore">
+              <div class="singapore-city"></div>
+            </div>
+            <div class="south-east-asia">
+              <div class="country myanmar" data-country="myanmar">
+                <div></div>
+              </div>
+                            <div class="country vietnam" data-country="vietnam">
+                <div></div>
+              </div>
+              <div class="country indonesia" data-country="indonesia">
+                <div>Jakarta</div>
+              </div>
+              <div class="country sri-lanka" data-country="sri-lanka">
+                <div>Colombo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery.cycle.all.js"></script>
+<script type="text/javascript" src="js/jquery.magnificPopup.all.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.cycle-banner').cycle({
+    timeout: 2000
+  });
+	
+	$( '.magnificPopup' ).magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		gallery: { enabled: true }
+	});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#network4 li li').each(function(){
+    var $this = $(this);
+    var name = $this.attr('class');
+    var is_city = $this.data('type') == 'city';
+    var $this_pin;
+    
+    if (is_city) {
+      $this_pin = $('#network_map4').find('.' + name);
+    } else {
+      $this_pin = $('#network_map4').find('.' + name).children();
+    }
+    
+    $this.hover(function(){
+      $this_pin.show().parent().addClass('hover');
+    }, function(){
+      $this_pin.hide().parent().removeClass('hover');
+    });
+  });
+  
+  $('#network_map4 .country').each(function(){
+    var $this = $(this);
+    var country_name = $this.data('country');
+    
+    $this.hover(function(){
+      $this.addClass('hover').children().show();
+      $('#network4').find('.' + country_name).addClass('hover');
+    }, function(){
+      $this.removeClass('hover').children().hide();
+      $('#network4').find('.' + country_name).removeClass('hover');
+    });
+  });
+  
+});
+</script>
+
+</body>
+</html>
+  
