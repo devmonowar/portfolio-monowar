@@ -7,7 +7,12 @@ $(document).ready(function(){
 			});
 		$('.projects-popup-link').magnificPopup({
 			type:'image',
+			gallery: {
+				  enabled: true
+				},
 			});
+				
+			
 		$(".slider-area").owlCarousel({
             items: 1,
             nav: true,
@@ -52,11 +57,22 @@ $(document).ready(function(){
         });
   /*=====Logo Crousel=========*/ 
 		$(".slide-client").owlCarousel({
-            items: 5,
             nav: false,
             dots: false,
             autoplay: true,			
             loop: true,
+			responsiveClass:true,
+			responsive:{
+				0:{
+					items:2,
+				},
+				600:{
+					items:4,
+				},
+				1000:{
+					items:5,
+				}
+			}
         });
   /*=====testimonial Crousel=========*/ 
 		$(".slide-testimonial").owlCarousel({
@@ -80,12 +96,23 @@ $(document).ready(function(){
 		
   /*=====related-portfolio Crousel=========*/ 
 		$("#related-portfolio").owlCarousel({
-            items: 3,
 			margin:20,
             nav: false,
             dots: true,
             autoplay: false,
             loop: true,
+			responsiveClass:true,
+			responsive:{
+				0:{
+					items:1,
+				},
+				600:{
+					items:2,
+				},
+				1000:{
+					items:3,
+				}
+			}
         });
 		
 
@@ -98,15 +125,37 @@ $(document).ready(function(){
 	});
 	//end counter number
 		
-
+	//		start fixed-menu
+		var nav = $('.header-area');
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 125) {
+				nav.addClass("fixed-menu");
+			} else {
+				nav.removeClass("fixed-menu");
+			}
+		});
+	//		end fixed-menu
+	
+	      /***
+          Preloader
+      ***/
+       $('body').addClass('preloader-active');
+      
+      $(window).on('load', function() { 
+          $('.preloader').fadeOut();
+          $('.preloader-spinner').delay(350).fadeOut('slow');
+          $('body').removeClass('preloader-active');
+      }); 
+	
+	
+	
 });
 
 	$(function(){
-		$('.mainmenu').slicknav();
+		$('.mainmenu').slicknav({
+			brand : '<a href="index.html"><img src="assets/img/logo.png" alt="logo" /></a>'
+		});
 	});
-
-
-
 
 	
 		//		start scrollTop
